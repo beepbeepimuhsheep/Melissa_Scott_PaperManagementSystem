@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+<style>
+    .divImg1, h2, h3{
+        margin: auto;
+        width: 60%;
+        text-align:center;
+
+    }
+
+    .divImg1 > img{
+        width: 90%;
+        height: 250px;
+        margin: 2px;
+        border: 1px solid black;
+    }
+
+    .divImg2 > img {
+        width: 44.5%;
+        height: 200px;
+        margin: 2px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<br />
+<h2>@ViewBag.Title.</h2>
+
+<br />
+<h3>Find out SACLA's <a href="https://link.springer.com/conference/sacla">latest activities!</a></h3>
+<br />
+<div class="divImg1">
+    <img src="~/Images/sacla.jfif" alt="SACLA" />
+    <div class="divImg2">
+        <img src="~/Images/sacla2.jfif" alt="SACLA2" />
+        <img src="~/Images/sacla4.png" alt="SACLA4" />
+    </div>
+    <img src="~/Images/sacla3.jpg" alt="SACLA3" />
+</div>

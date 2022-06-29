@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Melissa_Scott_9189_SA2_IPG521_Final.Models.Author>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Papers</h2>
+
+<div class=" container img-rounded caption btn-info">
+    @Html.Action(actionName: "Message", controllerName: "Message")
+</div>
+
+
+
+<p>
+    @Html.ActionLink("Submit new paper", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperDateSubmitted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Topics.TopicName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperDateSubmitted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Topics.TopicName)
+            </td>
+            <td>
+                <button class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.PaperId })</button>
+                <button class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.PaperId }, new { onclick = "return confirm('Are you sure you want to delete this paper?')" })</button>
+            </td>
+        </tr>
+    }
+
+</table>

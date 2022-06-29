@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+@{
+    string message = TempData["Message"] as string;
+    if (!String.IsNullOrEmpty(message))
+    {
+        <div class="message">
+            <p>@message</p>
+        </div>
+    }
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Message</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

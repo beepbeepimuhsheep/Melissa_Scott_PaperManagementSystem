@@ -1,0 +1,50 @@
+﻿@model Melissa_Scott_9189_SA2_IPG521_Final.Models.Author
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Paper Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperAbstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperAbstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Topics.TopicName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Topics.TopicName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaperId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
